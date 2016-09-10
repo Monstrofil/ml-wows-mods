@@ -1,0 +1,33 @@
+<div class="popup" style="min-width:450px; max-width: 800px; top: 80px;">
+
+    <div class="popup-head">
+        Добавить изображение
+        <div class="popup-close ngdialog-button" ng-click="closeThisDialog('close')"></div>
+    </div>
+
+    <form ng-submit="submit_image_upload(upload_image_form)"  class="popup-content replay_upload ng-pristine ng-valid" name="upload_video_form" e-form="upload_image_form" method="post">
+        <input type="hidden" name="_method" value="">
+
+        <div class="popup-input">
+            <label class="popup-label" for="replayFile">
+                Изображение
+            </label>
+            <label class="btn btn-orange" for="replayFile">
+                Выбрать изображение
+                <input type="hidden" name="ReplaysForm[filename]" value="">
+                <input type="file" onchange="angular.element(this).scope().setFile(this)" id="replayFile"
+                       name="uploadForm[filename]" style="display: none"> </label>
+
+            <div class="popup-selected" style="display: block;">
+                <span style="margin-left: 20px" class="title" ng-bind="image_file.name"></span>
+            </div>
+            <div class="popup-error error_title">{{ error_text }}</div>
+        </div>
+
+        <div class="footer-button">
+
+            <button type="submit" class="btn btn-orange">Ок</button>
+        </div>
+
+    </form>
+</div>

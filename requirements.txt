@@ -1,0 +1,14 @@
+django==1.8.9
+django_openid_auth
+psycopg2
+numpy
+pillow
+djangorestframework
+django-rest-swagger
+django-angular
+six
+django_compressor
+django-hitcount
+django-imagekit
+django-cleanup
+embed_video

@@ -1,0 +1,17 @@
+<div class="popup" style="top: 40px; width: 350px">
+
+    <div class="popup-head">
+        Информация
+        <div class="popup-close ngdialog-button" ng-click="closeThisDialog('close')"></div>
+    </div>
+
+    <form class="popup-content replay_upload ng-pristine ng-valid">
+        <p>Произошла ошибка! Если вы уверены что сделали все правильно, обратитесь к администрации сайта.</p>
+        <p>Текст ошибки:</p>
+        <div class="popup-error error_title">{{ error.data.detail }}</div>
+
+        <div class="footer-button">
+            <button type="submit" ng-click="closeThisDialog('close')" class="btn btn-orange">Ок</button>
+        </div>
+    </form>
+</div>

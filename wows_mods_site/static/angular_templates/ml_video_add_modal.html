@@ -1,0 +1,29 @@
+<div class="popup" style="top: 80px;">
+
+    <div class="popup-head">
+        Добавить видео
+        <div class="popup-close ngdialog-button" ng-click="closeThisDialog('close')"></div>
+    </div>
+
+    <form ng-submit="submit_video_upload(upload_video_form)"  class="popup-content replay_upload ng-pristine ng-valid" name="upload_video_form" e-form="upload_file_form" method="post">
+        <input type="hidden" name="_method" value="">
+
+        <div>
+            <label class="popup-label" for="replayTitle">
+                Ссылка на видео (youtube)
+            </label>
+            <div class="clearfix">
+                <input type="text" id="replayTitle" class="form-control" name="video_url" ng-model="video_url"/>
+            </div>
+            <div class="popup-error error_title">{{ error_text }}</div>
+
+        </div>
+
+
+        <div class="footer-button">
+
+            <button type="submit" class="btn btn-orange">Ок</button>
+        </div>
+
+    </form>
+</div>

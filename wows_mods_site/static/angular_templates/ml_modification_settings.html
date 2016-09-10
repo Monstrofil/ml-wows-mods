@@ -1,0 +1,53 @@
+<div class="popup" style="top: 40px;">
+
+    <div class="popup-head">
+        Дополнительные параметры
+        <div class="popup-close ngdialog-button" ng-click="closeThisDialog('close')"></div>
+    </div>
+
+    <form ng-submit="submitSave(modification_settings)"  class="popup-content replay_upload ng-pristine ng-valid" name="modification_settings" e-form="modification_settings" method="post">
+        <input type="hidden" name="_method" value="">
+
+        <div>
+            <label class="popup-label" for="smallDescription">
+                Изображение для предпросмотра
+            </label>
+
+            <div class="preview">
+                <img class="preview_img" ng-src="{{ ml_preview }}">
+            </div>
+
+            <div class="popup-input">
+
+                <label class="btn btn-orange" for="previewFile">
+                    Выбрать файл
+                    <input type="hidden" name="ReplaysForm[filename]" value="">
+                    <input type="file" onchange="angular.element(this).scope().setFile(this)" id="previewFile"
+                           name="uploadForm[filename]" style="display: none" accept="image/*"> </label>
+
+                <div class="popup-selected" style="display: block;">
+                    <span style="margin-left: 20px" class="title" ng-bind="image_file.name"></span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <label class="popup-label" for="smallDescription">
+                Короткое описание (до 150 символов)
+            </label>
+            <div class="clearfix">
+                <input type="text" id="smallDescription" class="form-control" value="{{ ml_short_description }}" name="ml_short_description" ng-model="ml_short_description">
+            </div>
+
+            <div class="popup-error error_title"></div>
+
+        </div>
+
+
+        <div class="footer-button">
+
+            <button type="submit" class="btn btn-orange">Сохранить</button>
+        </div>
+
+    </form>
+</div>

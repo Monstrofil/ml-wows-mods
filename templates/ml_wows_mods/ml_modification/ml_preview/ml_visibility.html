@@ -1,0 +1,9 @@
+{% extends "ml_wows_mods/ml_blocks/ml_default_block.html" %}
+
+{% block ml_content %}
+    <div class="item_image">
+        {% for image_relation in data.ml_visibility_previews_short.all %}
+            <div class="image visibility" style="background-image: url({{ image_relation.ml_image.url }})"></div>
+        {% endfor %}
+    </div>
+{% endblock %}

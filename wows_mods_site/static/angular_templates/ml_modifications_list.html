@@ -1,0 +1,29 @@
+<div>
+    <h1 class="heading-2">Модификации</h1>
+    <!--<a href="/openid/login/" target="_self">kjsgfjd</a>-->
+
+    <div class="layout_grid">
+        <div class="col-2-row-1 tile no_padding" data-ng-repeat="modification in modifications">
+            <a href="{{ modification.ml_url }}" class="item_link">
+                <div class="item_image">
+                    <div class="image" style="background-image: url('{{ modification.ml_preview }}')"></div>
+                </div>
+
+                <div class="item_content">
+                    <h2 class="item_heading" data-ng-bind="modification.ml_name"></h2>
+
+                    <div class="item_description" data-ng-bind="modification.ml_short_description"></div>
+
+                    <div class="item_buttons">
+                        <span class="button button__tile">
+                            Подробнее
+                        </span>
+                    </div>
+                </div>
+                <div class="offer">
+                    <div class="game-version" data-ng-bind="modification.ml_game_version_title"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
